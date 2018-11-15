@@ -1,12 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ToDoList.Models;
+using System.Collections.Generic;
+using System;
 
 namespace ToDoList.Tests
 {
   [TestClass]
-  public class ItemTest
+  public class ItemTest : IDisposable
   {
-
+    
+    public void Dispose()
+    {
+      Item.ClearAll();
+    }
     [TestMethod]
     public void ItemConstructor_CreatesInstanceOfItem_Item()
     {
@@ -34,6 +40,36 @@ namespace ToDoList.Tests
       string result = newItem.GetDescription();
 
       Assert.AreEqual(updatedDescription, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_ItemList()
+    {
+      List<Item> newList = new List<Item> {};
+      List<Item> result = Item.GetAll();
+      foreach(Item thisItem in result)
+      {
+        Console.WriteLine("Output from empty list GetAll test: " + thisItem.GetDescription());
+      }
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsItems_ItemList()
+    {
+      string description1 = "Walk the dog";
+      string description2 = "Wash the dishes";
+      Item newItem1 = new Item(description1);
+      Item newItem2 = new Item(description2);
+      List<Item> newList = new List<Item> {newItem1, newItem2};
+
+      List<Item> result = Item.GetAll();
+      foreach (Item thisItem in result)
+      {
+        Console.WriteLine("Output from secondGetAll test: " + thisItem.GetDescription());
+      }
+
+      CollectionAssert.AreEqual(newList, result);
     }
 
   }
