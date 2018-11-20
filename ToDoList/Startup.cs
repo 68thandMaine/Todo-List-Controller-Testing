@@ -22,6 +22,10 @@ namespace FriendLetter
     {
       services.AddMvc();
     }
+    public void Configure(IApplicationBuilder app)
+    {
+      app.UseDeveloperExceptionPage(;)
+    }
 
     public void Configure(IApplicationBuilder app)
     {

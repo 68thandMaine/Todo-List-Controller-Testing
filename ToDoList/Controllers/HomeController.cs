@@ -3,21 +3,27 @@ using ToDoList.Models;
 
 namespace ToDoList.Controllers
 {
-  public class HomeController : Controller
-  {
-    [Route("/")]
-    public ActionResult Index()
+    public class HomeController : Controller
     {
-      Item starterItem = new Item ("Add first item to To Do List");
-      return View(starterItem);
-    }
 
-    [Route("/items")]
-    public ActionResult CreateForm(string description)
-    {
-      Item myItem = new Item(description);
-      myItem.Save();
-      return View("Index", myItem);
+        [Route("/items")]
+        public ActionResult Index()
+        {
+            List<Item> allItems =Item.GetAll();
+            return View(allItems);
+        }
+
+        [Route("/items/form")]
+        public ActionResult CreateForm()
+        {
+            return View();
+        }
+        [Route("/items/new")]
+        public ActionResult Create(string description)
+        {
+            Item myItem = new Item(description);
+            myItem.Save();
+            return RedirectToAction("Index");
+        }
     }
-  }
 }
