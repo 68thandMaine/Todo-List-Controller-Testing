@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FriendLetter
+namespace ToDoList
 {
   public class Startup
   {
@@ -22,13 +22,11 @@ namespace FriendLetter
     {
       services.AddMvc();
     }
-    public void Configure(IApplicationBuilder app)
-    {
-      app.UseDeveloperExceptionPage(;)
-    }
+
 
     public void Configure(IApplicationBuilder app)
     {
+      app.UseDeveloperExceptionPage();
       app.UseMvc(routes =>
       {
         routes.MapRoute(
