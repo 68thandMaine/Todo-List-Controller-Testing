@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using ToDoList.Models;
 
 namespace ToDoList.Controllers
 {
@@ -9,6 +10,14 @@ namespace ToDoList.Controllers
     {
       Item starterItem = new Item ("Add first item to To Do List");
       return View(starterItem);
+    }
+
+    [Route("/items")]
+    public ActionResult CreateForm(string description)
+    {
+      Item myItem = new Item(description);
+      myItem.Save();
+      return View("Index", myItem);
     }
   }
 }

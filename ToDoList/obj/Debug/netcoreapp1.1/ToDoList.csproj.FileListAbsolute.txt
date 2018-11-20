@@ -12,3 +12,10 @@
 /Users/Guest/Desktop/practice-testing-homework/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.AssemblyInfo.cs
 /Users/Guest/Desktop/practice-testing-homework/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.dll
 /Users/Guest/Desktop/practice-testing-homework/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.pdb
+/Users/playourheartout/Desktop/todolist/ToDoList/bin/Debug/netcoreapp1.1/ToDoList.deps.json
+/Users/playourheartout/Desktop/todolist/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.csproj.CoreCompileInputs.cache
+/Users/playourheartout/Desktop/todolist/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.AssemblyInfo.cs
+/Users/playourheartout/Desktop/todolist/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.dll
+/Users/playourheartout/Desktop/todolist/ToDoList/obj/Debug/netcoreapp1.1/ToDoList.pdb
+/Users/playourheartout/Desktop/todolist/ToDoList/bin/Debug/netcoreapp1.1/ToDoList.dll
+/Users/playourheartout/Desktop/todolist/ToDoList/bin/Debug/netcoreapp1.1/ToDoList.pdb
