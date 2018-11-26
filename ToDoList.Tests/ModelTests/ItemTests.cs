@@ -8,7 +8,7 @@ namespace ToDoList.Tests
   [TestClass]
   public class ItemTest : IDisposable
   {
-    
+
     public void Dispose()
     {
       Item.ClearAll();
@@ -54,23 +54,23 @@ namespace ToDoList.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    [TestMethod]
-    public void GetAll_ReturnsItems_ItemList()
-    {
-      string description1 = "Walk the dog";
-      string description2 = "Wash the dishes";
-      Item newItem1 = new Item(description1);
-      Item newItem2 = new Item(description2);
-      List<Item> newList = new List<Item> {newItem1, newItem2};
-
-      List<Item> result = Item.GetAll();
-      foreach (Item thisItem in result)
-      {
-        Console.WriteLine("Output from secondGetAll test: " + thisItem.GetDescription());
-      }
-
-      CollectionAssert.AreEqual(newList, result);
-    }
+    // [TestMethod]
+    // public void GetAll_ReturnsItems_ItemList()
+    // {
+    //   string description1 = "Walk the dog";
+    //   string description2 = "Wash the dishes";
+    //   Item newItem1 = new Item(description1);
+    //   Item newItem2 = new Item(description2);
+    //   List<Item> newList = new List<Item> {newItem1, newItem2};
+    //
+    //   List<Item> result = Item.GetAll();
+    //   foreach (Item thisItem in result)
+    //   {
+    //     Console.WriteLine("Output from secondGetAll test: " + thisItem.GetDescription());
+    //   }
+    //
+    //   CollectionAssert.AreEqual(newList, result);
+    // }
 
   }
 }
