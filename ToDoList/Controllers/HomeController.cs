@@ -7,11 +7,12 @@ namespace ToDoList.Controllers
     public class HomeController : Controller
     {
 
-        [Route("/items")]
+        [HttpGet("/")]
         public ActionResult Index()
         {
-            List<Item> allItems = Item.GetAll();
-            return View(allItems);
+          return View();
+            // List<Item> allItems = Item.GetAll();
+            // return View(allItems);
         }
 
         [Route("/items/form")]
