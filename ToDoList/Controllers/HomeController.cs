@@ -10,7 +10,7 @@ namespace ToDoList.Controllers
         [Route("/items")]
         public ActionResult Index()
         {
-            List<Item> allItems = Item.GetAll();
+            List<Item> allItems =Item.GetAll();
             return View(allItems);
         }
 
