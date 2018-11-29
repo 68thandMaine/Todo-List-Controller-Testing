@@ -80,6 +80,7 @@ namespace ToDoList.Tests
      public void GetItems_ReturnsEmptyItemList_ItemList()
      {
        //Arrange
+       string name= "work";
        Category newCategory = new Category("work");
        List<Item> newList = new List<Item>{};
 
@@ -87,7 +88,7 @@ namespace ToDoList.Tests
        List<Item> result = newCategory.GetItems();
 
        //Assert
-       Assert.AreEqual(newList, result);
+       CollectionAssert.AreEqual(newList, result);
      }
   }
 }
