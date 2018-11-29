@@ -3,12 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using ToDoList.Controllers;
 using ToDoList.Models;
+using System;
 
 namespace ToDoList.Tests
 {
   [TestClass]
-  public class ItemsControllerTest
+  public class ItemsControllerTest : IDisposable
   {
+    public void Dispose()
+    {
+      Item.ClearAll();
+    }
+
     [TestMethod]
     public void Create_ReturnsCorrectActionType_RedirectToActionResult()
     {
