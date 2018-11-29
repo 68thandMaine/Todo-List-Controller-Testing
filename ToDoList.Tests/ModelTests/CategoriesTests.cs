@@ -73,8 +73,21 @@ namespace ToDoList.Tests
        //Act
        Category result = Category.Find(2);
 
-       //Arrange
+       //Assert
        Assert.AreEqual (newCategory2, result);
+     }
+     [TestMethod]
+     public void GetItems_ReturnsEmptyItemList_ItemList()
+     {
+       //Arrange
+       Category newCategory = new Category("work");
+       List<Item> newList = new List<Item>{};
+
+       //Act
+       List<Item> result = newCategory.GetItems();
+
+       //Assert
+       Assert.AreEqual(newList, result);
      }
   }
 }
