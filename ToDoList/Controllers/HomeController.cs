@@ -6,12 +6,11 @@ namespace ToDoList.Controllers
 {
     public class HomeController : Controller
     {
-
-        [Route("/")]
+        [HttpGet("/")]
         public ActionResult Index()
         {
             return View();
+
         }
-        
     }
 }
