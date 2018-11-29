@@ -90,5 +90,21 @@ namespace ToDoList.Tests
        //Assert
        CollectionAssert.AreEqual(newList, result);
      }
+
+     [TestMethod]
+     public void AddItem_AssociatesItemWithCategory_ItemList()
+     {
+       //Arrange
+       Item newItem = new Item("Walk the dog");
+       List<Item> newList = new List<Item> { newItem };
+       Category newCategory = new Category("Work");
+       newCategory.AddItem(newItem);
+
+       //Act
+       List<Item> result = newCategory.GetItems();
+
+       //Assert
+       CollectionAssert.AreEqual(newList, result);
+     }
   }
 }
